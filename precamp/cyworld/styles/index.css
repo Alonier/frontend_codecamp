@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+.background {
+  width: 1024px;
+  height: 600px;
+  background-image: url("../images/background.png");
+  padding: 20px 0px 0px 20px;
+}
+
+.outerbox {
+  width: 808px;
+  height: 544px;
+  background-image: url("../images/outerbox.png");
+}
+
+/* padding값이 변경되면서 명시되지 않았던 wrapper의 크기가 커짐. */
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  padding: 32px 0px 0px 32px;
+}
+
+.wrapper__left {
+  width: 208px;
+  height: 472px;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper__left__header {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.today {
+  font-size: 9px;
+  color: #55b2d4;
+}
+
+.wrapper__left__body {
+  width: 100%;
+  height: 100%;
+  border: 1px solid gray;
+  border-radius: 15px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 30px;
+}
+
+.left__body__header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.left__body__header__gray {
+  width: 148px;
+  height: 133px;
+  background-color: gray;
+}
+
+.left__body__header__line {
+  border-top: 1px dotted black;
+  /* 상하 여백, 좌우 여백 결졍 */
+  margin: 12px 0px;
+}
+
+.left__body__profile {
+  width: 100%;
+  height: 80px;
+}
+
+.left__body__profile__content {
+  font-size: 9px;
+  font-weight: 700;
+  color: #999999;
+  margin-bottom: 10px;
+}
+
+.left__body__profile__content i {
+  margin-right: 5px;
+}
+
+.left__body__footer {
+  width: 100%;
+  height: 41px;
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+}
+
+.left__body__footer div {
+  font-size: 11px;
+  font-weight: 400;
+  color: #999999;
+}
+
+/* option의 font 속성 변경을 위해 select 에 css 설정을 요함 */
+.left__body__footer select {
+  margin-top: 5px;
+  color: #999999;
+  font-size: 11px;
+}
+
+.wrapper__right {
+  width: 524px;
+  height: 472px;
+}

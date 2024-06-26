@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+    <style>
+      .root {
+        width: 1920px;
+        height: 1080px;
+      }
+      .outline {
+        width: 670px;
+        height: 960px;
+        margin-top: 60px;
+        margin-left: 625px;
+        border: 1px solid #aacdff;
+        border-radius: 20px;
+        box-shadow: 7px 7px 39px 0px #0068ff40;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      .section {
+        width: 470px;
+        height: 818px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .section form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .input_box {
+        border: none;
+        border-bottom: 1px solid #797979;
+        background: none;
+        width: 100%;
+        height: 55px;
+        font-size: 24px;
+      }
+
+      .gen {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 20px;
+        font-size: 16px;
+        font-weight: 400;
+      }
+
+      .gen input {
+        border: 1px solid #d2d2d2;
+      }
+
+      .desc {
+        font-size: 16px;
+        font-weight: 400;
+        color: #797979;
+      }
+
+      input:focus {
+        outline: none;
+      }
+      input[type="checkbox"] {
+        border-radius: 3px;
+        border: 1ox solid #c4c4c4;
+      }
+
+      button {
+        height: 75px;
+        width: 100%;
+        border: 1px solid #0068ff;
+        border-radius: 10px;
+        background-color: #ffffff;
+        font-size: 18px;
+        font-weight: 400;
+        color: #0068ff;
+      }
+
+      hr {
+        border: 1px solid #e6e6e6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="root">
+      <div class="outline">
+        <div class="section">
+          <h2 style="color: #0068ff; font-size: 32px">
+            회원 가입을 위해<br />
+            <span style="color: blue">정보</span>를 입력해주세요
+          </h2>
+          <form style="margin-top: 40px">
+            <div>
+              <div class="desc">* 이메일</div>
+              <input type="text" class="input_box" />
+            </div>
+            <div>
+              <div class="desc">* 이름</div>
+              <input type="text" class="input_box" />
+            </div>
+            <div>
+              <div class="desc">* 비밀번호</div>
+              <input type="text" class="input_box" />
+            </div>
+            <div>
+              <div class="desc">* 비밀번호 확인</div>
+              <input type="text" class="input_box" />
+            </div>
+            <div class="gen">
+              <input type="radio" name="gender" />여성<input
+                type="radio"
+                name="gender"
+                style="margin-left: 20px"
+              />남성
+            </div>
+            <div style="margin-top: 20px">
+              <input type="checkbox" style="margin-right: 10px" />이용약관
+              개인정보 수집 및 이용, 마케팅 활용 선택에 모두 동의합니다.
+            </div>
+            <div style="height: 1px; border-bottom: 1px solid #e6e6e6"></div>
+            <button>가입하기</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
