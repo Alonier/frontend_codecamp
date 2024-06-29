@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="final.css" rel="stylesheet" />
+    <script src="final.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="outterbox">
+        <div class="title">코드캠프 회원가입</div>
+        <input
+          type="text"
+          class="textbox"
+          id="email"
+          placeholder="이메일을 입력해 주세요."
+          oninput="checkValidation()"
+        />
+        <input
+          type="text"
+          class="textbox"
+          id="name"
+          placeholder="이름을 입력해 주세요."
+          oninput="checkValidation()"
+        />
+        <input
+          type="text"
+          class="textbox"
+          id="pw"
+          placeholder="비밀번호를 입력해 주세요."
+          oninput="checkValidation()"
+        />
+        <input
+          type="text"
+          class="textbox"
+          id="pw2"
+          placeholder="비밀번호를 다시 입력해 주세요."
+          oninput="checkValidation()"
+        />
+        <div class="phone">
+          <input
+            type="text"
+            maxlength="3"
+            class="phonebox"
+            id="p1"
+            oninput="changePhone1(), checkValidation()"
+          />-
+          <input
+            type="text"
+            maxlength="4"
+            class="phonebox"
+            id="p2"
+            oninput="changePhone2(), checkValidation()"
+          />-
+          <input
+            type="text"
+            maxlength="4"
+            class="phonebox"
+            id="p3"
+            oninput="changePhone3()"
+          />
+        </div>
+        <div class="authdiv">
+          <span id="authnum">000000</span
+          ><button class="complete" id="sendAuth" onclick="sendAuth()" disabled>
+            인증번호 전송
+          </button>
+        </div>
+        <div class="timer">
+          <span id="timer">3:00</span
+          ><button
+            class="complete"
+            id="receiveAuth"
+            onclick="receiveAuth()"
+            disabled
+          >
+            인증확인
+          </button>
+        </div>
+        <select>
+          <option disabled selected>지역을 선택하세요.</option>
+          <option onclick="checkValidation()">서울</option>
+          <option onclick="checkValidation()">경기</option>
+          <option onclick="checkValidation()">인천</option>
+        </select>
+        <div class="gender">
+          <input type="radio" name="gender" onclick="checkValidation()" />여성
+          <input type="radio" name="gender" onclick="checkValidation()" />남성
+        </div>
+        <div class="divideLine"></div>
+        <button
+          class="registerButton"
+          id="register"
+          onclick="register()"
+          disabled
+        >
+          가입하기
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -9,6 +9,7 @@
       src="https://kit.fontawesome.com/749c71b060.js"
       crossorigin="anonymous"
     ></script>
+    <script src="index.js"></script>
   </head>
   <body>
     <div class="background">
@@ -51,11 +52,37 @@
                 <div>오늘의 기분</div>
                 <select>
                   <option>기쁨 😊</option>
+                  <option>슬픔 😭</option>
+                  <option>화남 😡</option>
+                  <option>지루함 😴</option>
                 </select>
               </div>
             </div>
           </div>
-          <div class="wrapper__right"></div>
+          <div class="wrapper__right">
+            <div class="wrapper__right__header">
+              <div class="right__header__title">사이 좋은 사람들, 싸이월드</div>
+              <div class="right__header__setting">사생활보호설정</div>
+            </div>
+            <div class="wrapper__right__body">
+              <iframe src="home.html" id="contentFrame"></iframe>
+            </div>
+          </div>
+          <div class="navigation">
+            <div class="navigation__item" id="menuHome" onclick="menuHome()">
+              홈
+            </div>
+            <div
+              class="navigation__item"
+              id="menuJukebox"
+              onclick="menuJukebox()"
+            >
+              주크박스
+            </div>
+            <div class="navigation__item" id="menuGame" onclick="menuGame()">
+              게임
+            </div>
+          </div>
         </div>
       </div>
     </div>
