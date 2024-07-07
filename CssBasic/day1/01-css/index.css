@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+.title {
+  color: red;
+}
+
+.box1 .title {
+  color: yellow;
+}
+
+.contents {
+  font-size: 28px;
+  font-style: italic;
+  text-decoration: line-through double;
+  font-weight: 600;
+}
+
+.title#headLine {
+  color: violet;
+}

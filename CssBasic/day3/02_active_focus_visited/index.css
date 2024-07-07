@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+.button1:active {
+  background-color: red;
+}
+
+.input1:focus {
+  background-color: greenyellow;
+}
+
+.link1:visited {
+  color: red;
+}

@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+.wrapper {
+  width: 100%;
+  height: 600px;
+  padding-bottom: 100px;
+
+  background-color: #e2e2e2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  height: 75px;
+  padding: 0px 100px;
+
+  background-color: white;
+  border-bottom: 1px solid black;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  text-decoration: none;
+  color: orange;
+}
+
+.menu__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+.menu__container li a {
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  width: 600px;
+  height: 400px;
+  background-color: white;
+  padding: 30px 30px;
+
+  border: 1px solid black;
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  width: 100%;
+  height: 50px;
+  background-color: rgb(255, 128, 0);
+
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 50px;
+  text-align: center;
+}
+
+.subtitle {
+  padding-top: 20px;
+}
+
+.subtitle p {
+  margin-top: 10px;
+  color: orange;
+  font-size: 20px;
+  text-decoration: underline 1px solid;
+}
+
+.dashedLine {
+  width: 100%;
+  height: 1px;
+  border-top: 1px dashed black;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.section {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #e2e2e2;
+  padding: 20px;
+}
+
+.section__title {
+  width: 100%;
+  height: 20px;
+
+  background-color: #f2f2f2;
+
+  line-height: 20px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.section__content {
+  width: 100%;
+  height: 70px;
+  padding-top: 15px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.section__content span:nth-child(1) {
+  color: red;
+}
+
+.section__content span:nth-child(2) {
+  color: yellowgreen;
+}
+
+.section__content span:last-child {
+  color: blue;
+  font-size: 18px;
+  font-style: italic;
+}
+
+.section__date {
+  color: #929292;
+  font-size: 12px;
+  text-align: end;
+}

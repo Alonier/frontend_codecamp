@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+/* .box1 {
+  background-color: gray;
+  width: 400px;
+  height: 300px; */
+/* 두께, 외곽선 스타일, 외곽선 색 */
+/* border: 2px solid red; */
+/* padding,margin의 기본 값은 투명, background의 색을 그대로 적용 */
+/* padding: 50px; */
+/* margin: 50px; */
+/* } */
+
+div {
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+}
+
+.box1 {
+  padding: 50px;
+  border: 1px solid blue;
+}

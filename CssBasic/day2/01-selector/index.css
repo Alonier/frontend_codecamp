@@ -1,0 +1,7 @@
+.box1 p:nth-child(3) {
+  color: red;
+}
+
+.box1 p:hover {
+  color: white;
+}
