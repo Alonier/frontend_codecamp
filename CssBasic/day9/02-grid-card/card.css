@@ -9,17 +9,16 @@ body {
 }
 
 .itemWrap {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 
-  flex-wrap: wrap;
-  align-content: space-between;
+  row-gap: 15px;
+  column-gap: 10px;
 }
 
 .item {
-  width: calc(25% - 7px);
+  width: 100%;
   /* 가로 세로 비율 설정 */
   aspect-ratio: 6 / 5;
 
@@ -27,7 +26,6 @@ body {
   overflow: hidden;
 
   border-radius: 10px;
-  margin-bottom: 15px;
 }
 
 .item:after {
