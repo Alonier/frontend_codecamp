@@ -91,7 +91,11 @@ todoInput.addEventListener("compositionend", () => {
  * key Enter시에 createTodo() 메서드 실행하는 Eventlister
  */
 todoInput.addEventListener("keydown", (event) => {
-  if (event.key === "Enter" && isComposing === false) {
+  if (
+    event.key === "Enter" &&
+    isComposing === false &&
+    todoInput.value.trim() !== ""
+  ) {
     createTodo();
   }
 });

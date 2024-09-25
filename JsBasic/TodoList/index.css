@@ -9,6 +9,9 @@ ul {
 }
 
 body {
+  background-image: url("./images/Clear.jpg");
+  background-size: cover;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -20,6 +23,13 @@ body {
 
 body > h1 {
   margin: 20px 0;
+  color: white;
+  text-shadow: 2px 2px black;
+  opacity: 80%;
+}
+
+input {
+  opacity: 80%;
 }
 
 .complete {
@@ -82,4 +92,13 @@ body > h1 {
   background-color: antiquewhite;
   padding: 0.2rem 1rem;
   cursor: pointer;
+
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px grey;
+}
+
+.deleteButton__wrapper button:active {
+  box-shadow: none;
+  margin-left: 3px;
 }
