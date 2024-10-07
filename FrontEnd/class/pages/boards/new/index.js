@@ -64,16 +64,16 @@ export default function BoardsNew() {
       </Wp_element_subtitle>
       <Container_wp style={{ width: "282px" }}>
         <UploadBtn>
-          <div style={{ fontSize: "28px", cursor: "none" }}>+</div>
-          <div style={{ fontSize: "12px", cursor: "none" }}>Upload</div>
+          <div>+</div>
+          <div>Upload</div>
         </UploadBtn>
         <UploadBtn>
-          <div style={{ fontSize: "28px", cursor: "none" }}>+</div>
-          <div style={{ fontSize: "12px", cursor: "none" }}>Upload</div>
+          <div>+</div>
+          <div>Upload</div>
         </UploadBtn>
         <UploadBtn>
-          <div style={{ fontSize: "28px", cursor: "none" }}>+</div>
-          <div style={{ fontSize: "12px", cursor: "none" }}>Upload</div>
+          <div>+</div>
+          <div>Upload</div>
         </UploadBtn>
       </Container_wp>
       <Wp_element_subtitle style={{ marginTop: "35px" }}>

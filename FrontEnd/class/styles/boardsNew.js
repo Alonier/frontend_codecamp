@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
 
   border: 1px solid #cacaca;
-  box-shadow: 2px 2px grey;
+  box-shadow: 0px 0px 10px gray;
 `;
 
 export const Title = styled.div`
@@ -94,6 +94,16 @@ export const UploadBtn = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  cursor: pointer;
+
+  div:first-child {
+    font-size: 28px;
+  }
+
+  div:last-child {
+    font-size: 12px;
+  }
 `;
 
 export const RadioBtn = styled.input`
