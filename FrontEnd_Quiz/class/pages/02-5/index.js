@@ -4,6 +4,7 @@ import {
   AccountContainer,
   Errmsg,
   Input,
+  InputDelete,
   KakaoLoginBtn,
   LoginButton,
   Mg10,
@@ -63,11 +64,18 @@ export default function itsRoadPage() {
       <Mg50></Mg50>
 
       <Input onChange={onChangeEmail}></Input>
-      <Errmsg>{emailErr}</Errmsg>
+      <Errmsg>
+        <div>{emailErr}</div>
+        <InputDelete src="ic-20-delete-white 1.png"></InputDelete>
+      </Errmsg>
       <Mg10></Mg10>
       <Mg10></Mg10>
       <Input type="password" onChange={onChangePw}></Input>
-      <Errmsg>{pwErr}</Errmsg>
+
+      <Errmsg>
+        <div> {pwErr}</div>
+        <InputDelete src="ic-20-delete-white 1.png"></InputDelete>
+      </Errmsg>
       <Mg10></Mg10>
       <LoginButton onClick={onClickLoginBtn}>로그인</LoginButton>
       <Mg50></Mg50>

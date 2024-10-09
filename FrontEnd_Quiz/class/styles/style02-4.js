@@ -44,6 +44,11 @@ export const Input = styled.input`
   color: white;
 `;
 
+export const InputDelete = styled.img`
+  transform: translateY(-35px);
+  cursor: pointer;
+`;
+
 export const Errmsg = styled.div`
   width: 540px;
   height: 20px;
@@ -52,6 +57,9 @@ export const Errmsg = styled.div`
   font-size: 16px;
   font-weight: 400;
   color: #ff1b6d;
+
+  display: flex;
+  justify-content: space-between;
 `;
 
 export const Mg100 = styled.div`
