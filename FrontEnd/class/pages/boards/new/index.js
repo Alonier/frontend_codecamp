@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import {
   Wrapper,
   Title,
@@ -13,6 +15,57 @@ import {
 
 export default function BoardsNew() {
   //자바스크립트 섹션
+  const [writer, setWriter] = useState("");
+  const [title, setTitle] = useState("");
+  const [password, setPassword] = useState("");
+  const [content, setContent] = useState("");
+  const [addressNum, setAddressNum] = useState("");
+  const [address, setAddress] = useState("");
+  const [youtube, setYoutube] = useState("");
+
+  const onChangeWriter = (event) => {
+    setWriter(event.target.value.trim());
+  };
+
+  const onChangeTitle = (event) => {
+    setTitle(event.target.value.trim());
+  };
+
+  const onChangePassword = (event) => {
+    setPassword(event.target.value.trim());
+  };
+
+  const onChangeContent = (event) => {
+    setContent(event.target.value.trim());
+  };
+
+  const onChangeAddressNum = (event) => {
+    setAddressNum(event.target.value.trim());
+  };
+
+  const onChangeAddress = (event) => {
+    setAddress(event.target.value.trim());
+  };
+
+  const onChangeYoutube = (event) => {
+    setYoutube(event.target.value.trim());
+  };
+
+  const onClickPost = (event) => {
+    console.log(writer, title, password, content, addressNum, address, youtube);
+
+    if (
+      writer === "" ||
+      title === "" ||
+      password === "" ||
+      content === "" ||
+      addressNum === "" ||
+      address === "" ||
+      youtube === ""
+    ) {
+      alert("내용을 만족하지 않았습니다!");
+    }
+  };
 
   //html 섹션
   return (
@@ -22,23 +75,35 @@ export default function BoardsNew() {
       <Container_wp style={{ marginTop: "70px" }}>
         <Container_wp_element>
           <Wp_element_subtitle>작성자</Wp_element_subtitle>
-          <Input placeholder="이름을 적어주세요."></Input>
+          <Input
+            placeholder="이름을 적어주세요."
+            onChange={onChangeWriter}
+          ></Input>
         </Container_wp_element>
         <Container_wp_element>
           <Wp_element_subtitle>비밀번호</Wp_element_subtitle>
-          <Input placeholder="비밀번호를 입력해주세요."></Input>
+          <Input
+            placeholder="비밀번호를 입력해주세요."
+            onChange={onChangePassword}
+          ></Input>
         </Container_wp_element>
       </Container_wp>
       <Container_wp style={{ marginTop: "35px" }}>
         <Container_wp_element style={{ width: "100%" }}>
           <Wp_element_subtitle>제목</Wp_element_subtitle>
-          <Input placeholder="제목을 작성해주세요."></Input>
+          <Input
+            placeholder="제목을 작성해주세요."
+            onChange={onChangeTitle}
+          ></Input>
         </Container_wp_element>
       </Container_wp>
       <Container_wp style={{ marginTop: "35px", height: "auto" }}>
         <Container_wp_element style={{ width: "100%" }}>
           <Wp_element_subtitle>내용</Wp_element_subtitle>
-          <Textarea placeholder="내용을 작성해주세요."></Textarea>
+          <Textarea
+            placeholder="내용을 작성해주세요."
+            onChange={onChangeContent}
+          ></Textarea>
         </Container_wp_element>
       </Container_wp>
       <Wp_element_subtitle style={{ marginTop: "15px" }}>
@@ -48,17 +113,21 @@ export default function BoardsNew() {
         <Input
           style={{ width: "72px", padding: "0px", textAlign: "center" }}
           placeholder="07250"
+          onChange={onChangeAddressNum}
         ></Input>
         <Button style={{ backgroundColor: "black", color: "white" }}>
           우편번호 검색
         </Button>
       </Container_wp>
-      <Input style={{ marginTop: "10px" }}></Input>
+      <Input style={{ marginTop: "10px" }} onChange={onChangeAddress}></Input>
       <Input style={{ marginTop: "20px" }}></Input>
       <Wp_element_subtitle style={{ marginTop: "35px" }}>
         유튜브
       </Wp_element_subtitle>
-      <Input placeholder="링크를 복사해주세요."></Input>
+      <Input
+        placeholder="링크를 복사해주세요."
+        onChange={onChangeYoutube}
+      ></Input>
       <Wp_element_subtitle style={{ marginTop: "35px" }}>
         사진 첨부
       </Wp_element_subtitle>
@@ -90,6 +159,7 @@ export default function BoardsNew() {
       <Container_wp style={{ marginTop: "80px", justifyContent: "center" }}>
         <Button
           style={{ width: "180px", backgroundColor: "#FFD600", border: "0" }}
+          onClick={onClickPost}
         >
           등록하기
         </Button>

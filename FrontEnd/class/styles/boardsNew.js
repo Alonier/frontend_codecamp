@@ -83,6 +83,8 @@ export const Button = styled.button`
 
   font-size: 16px;
   text-align: center;
+
+  cursor: pointer;
 `;
 
 export const UploadBtn = styled.div`
