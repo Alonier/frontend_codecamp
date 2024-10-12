@@ -16,9 +16,8 @@ import { gql, useMutation } from "@apollo/client";
 
 const CREATE_BOARD = gql`
   mutation createBoard($createBoardInput: CreateBoardInput!) {
-    createBoard(createBoardInput: $CreateBoardInput) {
+    createBoard(createBoardInput: $createBoardInput) {
       _id
-      createdAt
     }
   }
 `;
@@ -89,12 +88,15 @@ export default function BoardsNew() {
 
     const result = await createBoard({
       variables: {
-        writer: writer,
-        title: title,
-        contents: contents,
-        password: password,
+        createBoardInput: {
+          writer,
+          title,
+          contents,
+          password,
+        },
       },
     });
+    console.log(result);
   };
 
   //html 섹션
