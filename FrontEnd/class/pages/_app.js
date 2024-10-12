@@ -6,7 +6,7 @@ import "../styles/globals.css";
 export default function App({ Component, pageProps }) {
   const client = new ApolloClient({
     //연결 할 uri 작성
-    uri: "http://backend-example.codebootcamp.co.kr/graphql",
+    uri: "http://backend-practice.codebootcamp.co.kr/graphql",
     //컴퓨터의 메모리에 백엔드에서 전송받은 데이터를 임시 저장
     cache: new InMemoryCache(),
   });

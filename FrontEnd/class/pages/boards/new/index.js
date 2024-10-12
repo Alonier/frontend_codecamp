@@ -12,16 +12,29 @@ import {
   UploadBtn,
   RadioBtn,
 } from "../../../styles/boardsNew";
+import { gql, useMutation } from "@apollo/client";
+
+const CREATE_BOARD = gql`
+  mutation createBoard($createBoardInput: CreateBoardInput!) {
+    createBoard(createBoardInput: $CreateBoardInput) {
+      _id
+      createdAt
+    }
+  }
+`;
 
 export default function BoardsNew() {
   //자바스크립트 섹션
   const [writer, setWriter] = useState("");
   const [title, setTitle] = useState("");
   const [password, setPassword] = useState("");
-  const [content, setContent] = useState("");
+  const [contents, setContents] = useState("");
   const [addressNum, setAddressNum] = useState("");
   const [address, setAddress] = useState("");
   const [youtube, setYoutube] = useState("");
+
+  //게시판 등록 함수
+  const [createBoard] = useMutation(CREATE_BOARD);
 
   const onChangeWriter = (event) => {
     setWriter(event.target.value.trim());
@@ -35,8 +48,8 @@ export default function BoardsNew() {
     setPassword(event.target.value.trim());
   };
 
-  const onChangeContent = (event) => {
-    setContent(event.target.value.trim());
+  const onChangeContents = (event) => {
+    setContents(event.target.value.trim());
   };
 
   const onChangeAddressNum = (event) => {
@@ -51,20 +64,37 @@ export default function BoardsNew() {
     setYoutube(event.target.value.trim());
   };
 
-  const onClickPost = (event) => {
-    console.log(writer, title, password, content, addressNum, address, youtube);
+  const onClickPost = async (event) => {
+    console.log(
+      writer,
+      title,
+      password,
+      contents,
+      addressNum,
+      address,
+      youtube
+    );
 
-    if (
-      writer === "" ||
-      title === "" ||
-      password === "" ||
-      content === "" ||
-      addressNum === "" ||
-      address === "" ||
-      youtube === ""
-    ) {
-      alert("내용을 만족하지 않았습니다!");
-    }
+    // if (
+    //   writer === "" ||
+    //   title === "" ||
+    //   password === "" ||
+    //   contents === "" ||
+    //   addressNum === "" ||
+    //   address === "" ||
+    //   youtube === ""
+    // ) {
+    //   alert("내용을 만족하지 않았습니다!");
+    // }
+
+    const result = await createBoard({
+      variables: {
+        writer: writer,
+        title: title,
+        contents: contents,
+        password: password,
+      },
+    });
   };
 
   //html 섹션
@@ -102,7 +132,7 @@ export default function BoardsNew() {
           <Wp_element_subtitle>내용</Wp_element_subtitle>
           <Textarea
             placeholder="내용을 작성해주세요."
-            onChange={onChangeContent}
+            onChange={onChangeContents}
           ></Textarea>
         </Container_wp_element>
       </Container_wp>
