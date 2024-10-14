@@ -13,6 +13,7 @@ import {
   RadioBtn,
 } from "../../../styles/boardsNew";
 import { gql, useMutation } from "@apollo/client";
+import { useRouter } from "next/router";
 
 const CREATE_BOARD = gql`
   mutation createBoard($createBoardInput: CreateBoardInput!) {
@@ -34,6 +35,8 @@ export default function BoardsNew() {
 
   //게시판 등록 함수
   const [createBoard] = useMutation(CREATE_BOARD);
+  //라우터 함수
+  const router = useRouter();
 
   const onChangeWriter = (event) => {
     setWriter(event.target.value.trim());
@@ -64,28 +67,6 @@ export default function BoardsNew() {
   };
 
   const onClickPost = async (event) => {
-    console.log(
-      writer,
-      title,
-      password,
-      contents,
-      addressNum,
-      address,
-      youtube
-    );
-
-    // if (
-    //   writer === "" ||
-    //   title === "" ||
-    //   password === "" ||
-    //   contents === "" ||
-    //   addressNum === "" ||
-    //   address === "" ||
-    //   youtube === ""
-    // ) {
-    //   alert("내용을 만족하지 않았습니다!");
-    // }
-
     const result = await createBoard({
       variables: {
         createBoardInput: {
@@ -96,7 +77,8 @@ export default function BoardsNew() {
         },
       },
     });
-    console.log(result);
+
+    router.push(`/boards/${result.data.createBoard._id}`);
   };
 
   //html 섹션
